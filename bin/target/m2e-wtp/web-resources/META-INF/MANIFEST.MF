@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: AssigmentInvoiceResource
+Implementation-Version: 1.0-SNAPSHOT
+Built-By: ￐ﾐ￐ﾽ￐ﾴ￑ﾀ￐ﾵ￐ﾹ
+Implementation-Vendor-Id: com.sarief.assigment
+Build-Jdk: 1.8.0_73
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
