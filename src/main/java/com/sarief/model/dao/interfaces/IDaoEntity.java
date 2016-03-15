@@ -28,10 +28,10 @@ public interface IDaoEntity<T>{
 	T update(T entity);
 	/**
 	 * delete entity from storage
-	 * @param entity - to be deleted
+	 * @param id - of entity to be deleted
 	 * @return deleted entity - returned entity will not have reference in storage
 	 */
-	T delete(T entity);
+	T delete(long id);
 	/**
 	 * read all entities
 	 * @return list of all entities 

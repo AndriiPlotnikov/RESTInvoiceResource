@@ -49,6 +49,14 @@ public class InvoiceResource implements ApplicationContextAware {
 	public List<Invoice> getInvoices(){
 		return DaoInvoice.readAll();
 	}
+	
+	@POST
+	@Consumes(MediaType.APPLICATION_XML)
+	@Produces(MediaType.APPLICATION_XML)
+	public Invoice addInvoice(Invoice invoice){
+		return DaoInvoice.create(invoice);
+	}
+	
 
 	@GET
 	@Path("/{invoiceId}")
@@ -57,25 +65,21 @@ public class InvoiceResource implements ApplicationContextAware {
 		return DaoInvoice.read(invoiceId);
 	}
 
-	@POST
-	@Path("/{invoiceId}")
-	@Produces(MediaType.APPLICATION_XML)
-	public String addInvoice(){
-		return "testPost";
-	}
-	
+
 	@PUT
 	@Path("/{invoiceId}")
+	@Consumes(MediaType.APPLICATION_XML)
 	@Produces(MediaType.APPLICATION_XML)
-	public String updateInvoice(){
-		return "testPut";
+	public Invoice updateInvoice(@PathParam("invoiceId") long invoiceId, Invoice invoice){
+		invoice.setId(invoiceId);
+		return DaoInvoice.update(invoice);
 	}
 	
 	@DELETE
 	@Path("/{invoiceId}")
 	@Produces(MediaType.APPLICATION_XML)
-	public String deleteInvoice(){
-		return "testdelete";
+	public Invoice deleteInvoice(@PathParam("invoiceId") long invoiceId){
+		return DaoInvoice.delete(invoiceId);
 	}
 	
 

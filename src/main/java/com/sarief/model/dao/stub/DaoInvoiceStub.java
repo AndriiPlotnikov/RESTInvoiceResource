@@ -50,15 +50,15 @@ public class DaoInvoiceStub implements IDaoEntity<Invoice> {
 
 	@Override
 	public Invoice update(Invoice entity) {
-		if (entity.getId() < 0) {
+		if (entity.getId() < 0 || entity.getState() == null) {
 			return null;
 		}
 		return invoices.replace(entity.getId(), entity);
 	}
 
 	@Override
-	public Invoice delete(Invoice entity) {
-		return invoices.remove(entity.getId());
+	public Invoice delete(long id) {
+		return invoices.remove(id);
 	}
 
 	@Override
