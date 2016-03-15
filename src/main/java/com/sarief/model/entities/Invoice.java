@@ -13,9 +13,21 @@ enum InvoiceState{
  */
 @XmlRootElement
 public class Invoice {
+	/**
+	 * unique identifier
+	 */
 	private long id;
+	/**
+	 * name of the buyer
+	 */
 	private String Buyer;
+	/**
+	 * name of the seller
+	 */
 	private String Seller;
+	/**
+	 * current state of invoice
+	 */
 	private InvoiceState state = InvoiceState.UNPAID;
 	
 	public long getId() {

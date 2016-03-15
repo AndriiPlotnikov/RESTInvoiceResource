@@ -22,12 +22,23 @@ import org.springframework.stereotype.Component;
 import com.sarief.model.dao.interfaces.IDaoEntity;
 import com.sarief.model.entities.Invoice;
 
-
+/**
+ * REST resource point
+ * 
+ * @author Andrii
+ *
+ */
 @Component
 @Path("/invoices")
 public class InvoiceResource implements ApplicationContextAware {
 	
+	/**
+	 * context of application
+	 */
 	private ApplicationContext context;
+	/**
+	 * DAO for invoice
+	 */
 	private IDaoEntity<Invoice> DaoInvoice;
 
 

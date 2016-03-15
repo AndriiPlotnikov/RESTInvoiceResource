@@ -10,6 +10,11 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.sarief.model.entities.Invoice;
 
+/**
+ * basic test for mock database
+ * @author Andrii
+ *
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = DaoInvoiceStub.class)
 @WebAppConfiguration

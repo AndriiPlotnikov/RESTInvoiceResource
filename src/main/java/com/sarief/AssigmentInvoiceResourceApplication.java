@@ -7,6 +7,11 @@ import org.springframework.context.annotation.ImportResource;
 
 import com.sarief.model.dao.stub.DaoInvoiceStub;
 
+/**
+ * entry point, main class, starts application
+ * @author Andrii
+ *
+ */
 @SpringBootApplication
 @ImportResource("com/sarief/beans.xml")
 public class AssigmentInvoiceResourceApplication {

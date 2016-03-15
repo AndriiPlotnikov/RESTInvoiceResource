@@ -8,6 +8,11 @@ import java.util.Map;
 import com.sarief.model.dao.interfaces.IDaoEntity;
 import com.sarief.model.entities.Invoice;
 
+/**
+ * mock database
+ * @author Андрей
+ *
+ */
 public class DaoInvoiceStub implements IDaoEntity<Invoice> {
 	private static final Map<Long, Invoice> invoices = new HashMap<>();
 
